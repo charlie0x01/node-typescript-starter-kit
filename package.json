@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Abdullah Tanveer <abdullahtanveer56@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "ts-node": "^10.9.2"
+  }
 }
