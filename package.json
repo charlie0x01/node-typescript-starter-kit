@@ -5,13 +5,14 @@
   "author": "Abdullah Tanveer <abdullahtanveer56@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "nodemon --config nodemon.json"
   },
   "dependencies": {
     "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@types/node": "^22.2.0",
+    "nodemon": "^3.1.4",
     "ts-node": "^10.9.2"
   }
 }
