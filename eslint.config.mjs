@@ -2,21 +2,20 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import jsdoc from 'eslint-plugin-jsdoc';
 import tseslint from 'typescript-eslint';
+import tsParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
 import promisePlugin from 'eslint-plugin-promise';
 import securityPlugin from 'eslint-plugin-security';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts}'] },
-  {
-    languageOptions: {
-      globals: { ...globals.node },
-    },
-  },
+  { languageOptions: { globals: { ...globals.node }, parser: tsParser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     plugins: {
+      prettier: prettierPlugin,
       import: importPlugin,
       promise: promisePlugin,
       security: securityPlugin,
@@ -26,8 +25,10 @@ export default [
   {
     rules: {
       ...importPlugin.configs.recommended.rules,
+      ...prettierPlugin.configs.recommended.rules,
       ...promisePlugin.configs.recommended.rules,
       ...securityPlugin.configs.recommended.rules,
+      'prettier/prettier': 'error',
       'import/order': ['error', { 'newlines-between': 'always' }],
       'node/no-unsupported-features/es-syntax': 'off', // Allow modern ES syntax
       'node/no-unpublished-import': 'off', // To avoid issues with TypeScript path mappings
@@ -38,9 +39,7 @@ export default [
   {
     settings: {
       'import/resolver': {
-        node: {
-          extensions: ['.js', '.ts'],
-        },
+        typescript: {},
       },
     },
   },
