@@ -6,7 +6,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --config nodemon.json",
-    "format": "prettier --write src/"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "lint-staged": "yarn run format && yarn run lint:fix"
   },
   "dependencies": {
     "typescript": "^5.5.4"
@@ -25,6 +29,8 @@
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-security": "^3.0.1",
     "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
