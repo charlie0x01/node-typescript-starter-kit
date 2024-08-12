@@ -10,7 +10,12 @@ import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts}'] },
-  { languageOptions: { globals: { ...globals.node }, parser: tsParser } },
+  {
+    languageOptions: {
+      globals: { ...globals.node, ...globals.jest },
+      parser: tsParser,
+    },
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
