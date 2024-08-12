@@ -1,0 +1,7 @@
+{
+  "name": "nodejs-typescript-starter-kit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Abdullah Tanveer <abdullahtanveer56@outlook.com>",
+  "license": "MIT"
+}
