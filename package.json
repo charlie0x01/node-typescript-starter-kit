@@ -5,7 +5,8 @@
   "author": "Abdullah Tanveer <abdullahtanveer56@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --config nodemon.json"
+    "dev": "nodemon --config nodemon.json",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "typescript": "^5.5.4"
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@types/node": "^22.2.0",
     "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
     "ts-node": "^10.9.2"
   }
 }
