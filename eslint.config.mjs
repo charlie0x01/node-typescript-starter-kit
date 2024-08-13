@@ -33,7 +33,7 @@ export default [
       ...prettierPlugin.configs.recommended.rules,
       ...promisePlugin.configs.recommended.rules,
       ...securityPlugin.configs.recommended.rules,
-      'prettier/prettier': 'error',
+      'prettier/prettier': ['error', { printWidth: 120, endOfLine: 'auto' }],
       'import/order': ['error', { 'newlines-between': 'always' }],
       'node/no-unsupported-features/es-syntax': 'off', // Allow modern ES syntax
       'node/no-unpublished-import': 'off', // To avoid issues with TypeScript path mappings
