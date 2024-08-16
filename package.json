@@ -12,7 +12,7 @@
     "prepare": "husky",
     "lint-staged": "yarn run format && yarn run lint:fix",
     "test": "jest .",
-    "text:watch": "jest --watch .",
+    "test:watch": "jest --watch .",
     "swagger": "ts-node ./src/swagger/swagger.ts",
     "typedoc": "yarn typedoc --out typedoc ./src/**/*.ts"
   },
