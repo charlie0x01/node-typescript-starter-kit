@@ -13,7 +13,6 @@ Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provi
 - **Express**: Lightweight web framework to handle server-side logic.
 - **Jest**: Comprehensive testing framework for unit and integration tests.
 - **Winston**: A logger for just about everything.
-- **TypeDoc**: TypeDoc is a documentation generator for TypeScript
 
 #### 📦 Getting Started
 
@@ -29,6 +28,7 @@ To get started with this starter kit, follow these simple steps:
 **2. Install Dependencies**
 
 ```bash
+    yarn install # recommended
     npm install
 ```
 
@@ -39,6 +39,7 @@ Copy the .env.example file to .env and configure your environment variables.
 Start the development server with:
 
 ```bash
+    yarn run dev # recommended
     npm run dev
 ```
 
@@ -46,14 +47,23 @@ Start the development server with:
 To create a production build, use:
 
 ```bash
-    npm run build
+    # recommended yarn
+    yarn or npm run build
 ```
 
 **6. Run Tests**
 Execute tests using:
 
 ```bash
-    npm test
+    # recommended yarn
+    yarn or npm test # for one time test
+    yarn or npm test:watch # to watch for changes and run on every change
+```
+
+#### ⚙️ Test Server
+
+```bash
+    GET http://localhost:8000/api/v1
 ```
 
 #### 🛠️ Configuration
@@ -99,7 +109,6 @@ This project is licensed under the MIT [License](./License). See the LICENSE fil
 [Swagger](https://swagger.io/docs/specification/basic-structure/) - Using [swagger-autogen](https://swagger-autogen.github.io/docs/getting-started/quick-start/) and [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
 [Express](https://expressjs.com/en/starter/installing.html)
 [Jest](https://jestjs.io/docs/getting-started)
-[TypeDoc](https://typedoc.org/guides/installation/)
 
 #### 🏷️ Tags
 
