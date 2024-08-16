@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.static(__dirname?.replace('src', '') + 'public'));
 // swagger document route
 // when you hit this route you shall auto generated swagger documentation
-app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // simple endpoint
 
