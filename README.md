@@ -13,6 +13,7 @@ Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provi
 - **Express**: Lightweight web framework to handle server-side logic.
 - **Jest**: Comprehensive testing framework for unit and integration tests.
 - **Winston**: A logger for just about everything.
+- **TypeDoc**: TypeDoc is a documentation generator for TypeScript
 
 #### 📦 Getting Started
 
@@ -64,6 +65,7 @@ This starter kit comes pre-configured with the following tools:
 - [x] **Husky**: Configured in package.json to run scripts and linting before commits.
 - [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
 - [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/docs.
+- [ ] **Winston**: Set up a logger for errors, warnings, info etc.
 
 #### 📚 Documentation
 
@@ -84,7 +86,7 @@ Create a new Pull Request.
 If you encounter any issues or have questions, please open an issue on the GitHub repository.
 
 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT [License](./License). See the LICENSE file for details.
 
 #### 🔗 Links
 
@@ -97,6 +99,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 [Swagger](https://swagger.io/docs/specification/basic-structure/) - Using [swagger-autogen](https://swagger-autogen.github.io/docs/getting-started/quick-start/) and [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
 [Express](https://expressjs.com/en/starter/installing.html)
 [Jest](https://jestjs.io/docs/getting-started)
+[TypeDoc](https://typedoc.org/guides/installation/)
 
 #### 🏷️ Tags
 
