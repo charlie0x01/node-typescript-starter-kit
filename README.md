@@ -12,6 +12,7 @@ Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provi
 - **Swagger**: API documentation and testing tools to streamline development.
 - **Express**: Lightweight web framework to handle server-side logic.
 - **Jest**: Comprehensive testing framework for unit and integration tests.
+- **Winston**: A logger for just about everything.
 
 #### 📦 Getting Started
 
@@ -58,11 +59,11 @@ Execute tests using:
 
 This starter kit comes pre-configured with the following tools:
 
-**ESLint**: Configured in .eslintrc.json to enforce coding standards.
-**Prettier**: Configured in .prettierrc for automatic formatting.
-**Husky**: Configured in package.json to run scripts and linting before commits.
-**Lint-Staged**: Configured in package.json to run linting on staged files.
-**Swagger**: Set up for API documentation and can be accessed via /api/v1/docs.
+- [x] **ESLint**: Configured in .eslintrc.json to enforce coding standards.
+- [x] **Prettier**: Configured in .prettierrc for automatic formatting.
+- [x] **Husky**: Configured in package.json to run scripts and linting before commits.
+- [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
+- [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/docs.
 
 #### 📚 Documentation
 
