@@ -2,6 +2,6 @@
   "watch": ["src/**/*.ts"],
   "ignore": ["src/**/*.space.ts", "src/**/*.test.ts"],
   "ext": "ts",
-  "exec": "ts-node src/index.ts",
+  "exec": "ts-node ./src/swagger/swagger.ts",
   "verbose": true
 }
