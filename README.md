@@ -1,4 +1,4 @@
-<img src="./assets/images/repo-banner.png" alt="repo-banner" />
+<img src="./public/images/repo-banner.png" alt="repo-banner" />
 
 # Node.js and TypeScript Backend Starter Kit
 

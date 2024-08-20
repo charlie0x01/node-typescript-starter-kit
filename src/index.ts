@@ -1,6 +1,6 @@
 import app from './app';
-import { boldText } from './utils/consoleColors';
-import env from './utils/env';
+import { boldText } from './utils/console-colors';
+import env from './config/env';
 
 app.listen(env.APP_PORT, () => {
   console.log(boldText.GREEN, `Server is up & running on http://localhost:${env.APP_PORT}`);
@@ -8,21 +8,28 @@ app.listen(env.APP_PORT, () => {
 
 // catch termination signals from system (system level interruptions)
 process.on('SIGTERM', (signal) => {
-  console.log(boldText.RED, 'SIGTERM signal: ', signal);
+  console.error(boldText.RED, 'SIGTERM SIGNAL! Shutting down...');
+  console.error(signal);
+  process.exit(1);
 });
 
 // catch termination signals from user (user level interruptions like Ctrl + C)
 process.on('SIGINT', (signal) => {
-  console.log(boldText.RED, 'SIGINT signal: ', signal);
-});
-
-// catch any error that is not catched properly
-process.on('uncaughtException', (error) => {
-  console.log(boldText.RED, 'Uncaught Error: ', error?.message);
+  console.error(boldText.RED, 'SIGINT SIGNAL! Shutting down...');
+  console.error(signal);
   process.exit(1);
 });
 
+// catch any error that is not catched properly
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION! Shutting down...');
+  console.error(err.name, err.message);
+  process.exit(1);
+});
 // catch any error that is not handled properly
-process.on('unhandledRejection', (error) => {
-  console.log(boldText.RED, 'Unhandled Error: ', error);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+process.on('unhandledRejection', (err: any) => {
+  console.error('UNHANDLED REJECTION! Shutting down...');
+  console.error(err.name, err.message);
+  process.exit(1);
 });

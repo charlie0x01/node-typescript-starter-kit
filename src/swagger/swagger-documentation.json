@@ -20,7 +20,7 @@
   "paths": {
     "/api/v1": {
       "get": {
-        "summary": "Welcome API Endpoint to start with multiline",
+        "summary": "Welcome API Endpoint to start with",
         "description": "",
         "responses": {
           "200": {
@@ -63,6 +63,46 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/test-system-error": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/test-programmer-error": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/test-operational-error": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/test-unhandle-promise-error": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

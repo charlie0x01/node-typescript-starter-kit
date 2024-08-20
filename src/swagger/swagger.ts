@@ -1,6 +1,6 @@
 import swaggerAutogen from 'swagger-autogen';
 
-import { boldText } from '../utils/consoleColors';
+import { boldText } from '../utils/console-colors';
 
 const documentConfiguration = {
   info: {
@@ -26,7 +26,7 @@ const documentConfiguration = {
   components: {}, // by default: empty object
 };
 
-export const outputFile = './src/swagger/swaggerDocumentation.json';
+export const outputFile = './src/swagger/swagger-documentation.json';
 export const routes = ['../app.ts'];
 swaggerAutogen({ openapi: '3.0.0' })(outputFile, routes, documentConfiguration)
   .then(async () => {
