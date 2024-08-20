@@ -1,3 +1,5 @@
+<img src="./assets/images/repo-banner.png" alt="repo-banner" />
+
 # Node.js and TypeScript Backend Starter Kit
 
 Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provides a robust foundation for building scalable and maintainable backend applications using Node.js and TypeScript. Perfect for developers looking to kickstart new projects without the repetitive setup tasks.
