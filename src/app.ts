@@ -17,9 +17,8 @@ app.use(express.static(__dirname?.replace('src', '') + 'public'));
 app.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // simple endpoint
-
 app.get('/api/v1', (req: Request, res: Response) => {
-  // #swagger.summary = "Welcome API Endpoint to start with multiline"
+  // #swagger.summary = "Welcome API Endpoint to start with"
   /*  #swagger.responses[200] = {
             description: 'Some description...',
             schema: {
@@ -27,7 +26,7 @@ app.get('/api/v1', (req: Request, res: Response) => {
                 message: "Welcome to Node Typescript Boilerplate"
             }
     } */
-  return res.status(200).json({ success: true, message: 'Welcome to Node Typescript Boilerplate' });
+  return res.status(200).json({ success: true, message: 'Welcome to Node Typescript Starter Kit' });
 });
 
 export default app;
