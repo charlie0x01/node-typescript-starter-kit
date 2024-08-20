@@ -10,6 +10,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts}'] },
+  { ignores: ['node_modules/', 'dist/', 'coverage/'] },
   {
     languageOptions: {
       globals: { ...globals.node, ...globals.jest },
