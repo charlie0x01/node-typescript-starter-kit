@@ -32,7 +32,7 @@
     "@types/node": "^22.2.0",
     "@types/swagger-ui-express": "^4.1.6",
     "@typescript-eslint/parser": "^8.1.0",
-    "eslint": "9.x",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
