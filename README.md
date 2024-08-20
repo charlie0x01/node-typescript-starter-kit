@@ -96,15 +96,15 @@ This project is licensed under the MIT [License](./License). See the LICENSE fil
 
 #### 🔗 Links
 
-[NodeJS](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
-[TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) - Using [ts-node](https://www.npmjs.com/package/ts-node) and [typescript](https://www.npmjs.com/package/typescript)
-[ESLint](https://eslint.org/docs/latest/use/getting-started)
-[Prettier](https://prettier.io/docs/en/install.html)
-[Husky](https://typicode.github.io/husky/get-started.html)
-[Lint-Staged](https://www.npmjs.com/package/lint-staged)
-[Swagger](https://swagger.io/docs/specification/basic-structure/) - Using [swagger-autogen](https://swagger-autogen.github.io/docs/getting-started/quick-start/) and [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
-[Express](https://expressjs.com/en/starter/installing.html)
-[Jest](https://jestjs.io/docs/getting-started)
+- [NodeJS](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) - Using [ts-node](https://www.npmjs.com/package/ts-node) and [typescript](https://www.npmjs.com/package/typescript)
+- [ESLint](https://eslint.org/docs/latest/use/getting-started)
+- [Prettier](https://prettier.io/docs/en/install.html)
+- [Husky](https://typicode.github.io/husky/get-started.html)
+- [Lint-Staged](https://www.npmjs.com/package/lint-staged)
+- [Swagger](https://swagger.io/docs/specification/basic-structure/) - Using [swagger-autogen](https://swagger-autogen.github.io/docs/getting-started/quick-start/) and [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
+- [Express](https://expressjs.com/en/starter/installing.html)
+- [Jest](https://jestjs.io/docs/getting-started)
 
 #### 🏷️ Tags
 
