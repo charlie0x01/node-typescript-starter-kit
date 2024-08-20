@@ -4,15 +4,14 @@ Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provi
 
 #### 🚀 Features
 
-- **TypeScript**: Strongly-typed JavaScript for reliable and maintainable code.
-- **ESLint**: Ensure your code follows consistent style and avoids common errors.
-- **Prettier**: Automatic code formatting to keep your codebase clean and consistent.
-- **Husky**: Git hooks for enforcing code quality and running scripts before commits.
-- **Lint-Staged**: Run linters on pre-committed files for faster feedback.
-- **Swagger**: API documentation and testing tools to streamline development.
-- **Express**: Lightweight web framework to handle server-side logic.
-- **Jest**: Comprehensive testing framework for unit and integration tests.
-- **Winston**: A logger for just about everything.
+This starter kit comes pre-configured with the following tools:
+
+- [x] **ESLint**: Configured in .eslintrc.json to enforce coding standards.
+- [x] **Prettier**: Configured in .prettierrc for automatic formatting.
+- [x] **Husky**: Configured in package.json to run scripts and linting before commits.
+- [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
+- [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/api-docs.
+- [ ] **Winston**: Set up a logger for errors, warnings, info etc.
 
 #### 📦 Getting Started
 
@@ -21,15 +20,19 @@ To get started with this starter kit, follow these simple steps:
 **1. Clone the Repository**
 
 ```bash
-    git clone https://github.com/charlie0x01/node-typescript-boilerplate.git
-    cd node-typescript-boilerplate
+git clone https://github.com/charlie0x01/node-typescript-starter-kit.git
+cd node-typescript-starter-kit
+
+# if you want to change the name of repo as you clone, use below command
+git clone https://github.com/charlie0x01/node-typescript-starter-kit.git {your-directory-name-here}
+cd {your-directory-name}
 ```
 
 **2. Install Dependencies**
 
 ```bash
-    yarn install # recommended
-    npm install
+yarn install # recommended
+npm install
 ```
 
 **3. Set Up Environment Variables**
@@ -39,56 +42,49 @@ Copy the .env.example file to .env and configure your environment variables.
 Start the development server with:
 
 ```bash
-    yarn run dev # recommended
-    npm run dev
+yarn run dev # recommended
+npm run dev
 ```
 
 **5. Build the Project**
 To create a production build, use:
 
 ```bash
-    # recommended yarn
-    yarn or npm run build
+yarn run build # recommended
+npm run build
 ```
 
 **6. Run Tests**
 Execute tests using:
 
 ```bash
-    # recommended yarn
-    yarn or npm test # for one time test
-    yarn or npm test:watch # to watch for changes and run on every change
+# run test for once
+yarn run test # recommended
+npm run test
+
+# watch test files and re-run test whenever file changes
+yarn run test:watch
+npm run test:watch
 ```
 
-#### ⚙️ Test Server
+#### ⚙️ Test Server by Hitting Welcome API
 
 ```bash
-    GET http://localhost:8000/api/v1
+http://localhost:8000/api/v1
 ```
-
-#### 🛠️ Configuration
-
-This starter kit comes pre-configured with the following tools:
-
-- [x] **ESLint**: Configured in .eslintrc.json to enforce coding standards.
-- [x] **Prettier**: Configured in .prettierrc for automatic formatting.
-- [x] **Husky**: Configured in package.json to run scripts and linting before commits.
-- [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
-- [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/docs.
-- [ ] **Winston**: Set up a logger for errors, warnings, info etc.
 
 #### 📚 Documentation
 
-API documentation is available through Swagger UI. Access it by navigating to /api/v1/docs in your running application.
+API documentation is available through Swagger UI. Access it by navigating to http:localhost:8000/api/v1/api-docs in your running application.
 
 #### 🤝 Contributing
 
 We welcome contributions to improve this starter kit. Please follow these steps:
 
 Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature/your-feature).
+Create a new branch (git checkout -b feature/your-feature|your-configuration).
+Commit your changes (git commit -am 'Add new feature'|'add new configuration').
+Push to the branch (git push origin feature/your-feature|your-configuration).
 Create a new Pull Request.
 
 #### 🚨 Issues and Support
@@ -112,4 +108,4 @@ This project is licensed under the MIT [License](./License). See the LICENSE fil
 
 #### 🏷️ Tags
 
-Node.js, TypeScript, Backend Starter Kit, Express, ESLint, Prettier, Husky, Lint-Staged, Swagger, Jest, API, Development, Open Source
+Node.js, TypeScript, Backend Starter Kit, Express, ESLint, Prettier, Husky, Lint-Staged, Swagger, Jest, API, Development, Open Source, REST API
