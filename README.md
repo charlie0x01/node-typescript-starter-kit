@@ -2,7 +2,7 @@
 
 Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provides a robust foundation for building scalable and maintainable backend applications using Node.js and TypeScript. Perfect for developers looking to kickstart new projects without the repetitive setup tasks.
 
-#### 🚀 Features
+## 🚀 Features
 
 This starter kit comes pre-configured with the following tools:
 
@@ -13,7 +13,7 @@ This starter kit comes pre-configured with the following tools:
 - [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/api-docs.
 - [ ] **Winston**: Set up a logger for errors, warnings, info etc.
 
-#### 📦 Getting Started
+## 📦 Getting Started
 
 To get started with this starter kit, follow these simple steps:
 
@@ -67,17 +67,17 @@ yarn run test:watch
 npm run test:watch
 ```
 
-#### ⚙️ Test Server by Hitting Welcome API
+## ⚙️ Test Server by Hitting Welcome API
 
 ```bash
 http://localhost:8000/api/v1
 ```
 
-#### 📚 Documentation
+## 📚 Documentation
 
 API documentation is available through Swagger UI. Access it by navigating to http:localhost:8000/api/v1/api-docs in your running application.
 
-#### 🤝 Contributing
+## 🤝 Contributing
 
 We welcome contributions to improve this starter kit. Please follow these steps:
 
@@ -87,14 +87,14 @@ Commit your changes (git commit -am 'Add new feature'|'add new configuration').
 Push to the branch (git push origin feature/your-feature|your-configuration).
 Create a new Pull Request.
 
-#### 🚨 Issues and Support
+## 🚨 Issues and Support
 
 If you encounter any issues or have questions, please open an issue on the GitHub repository.
 
 📄 License
 This project is licensed under the MIT [License](./License). See the LICENSE file for details.
 
-#### 🔗 Links
+### 🔗 Links
 
 - [NodeJS](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) - Using [ts-node](https://www.npmjs.com/package/ts-node) and [typescript](https://www.npmjs.com/package/typescript)
@@ -106,6 +106,6 @@ This project is licensed under the MIT [License](./License). See the LICENSE fil
 - [Express](https://expressjs.com/en/starter/installing.html)
 - [Jest](https://jestjs.io/docs/getting-started)
 
-#### 🏷️ Tags
+## 🏷️ Tags
 
 Node.js, TypeScript, Backend Starter Kit, Express, ESLint, Prettier, Husky, Lint-Staged, Swagger, Jest, API, Development, Open Source, REST API
