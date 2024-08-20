@@ -1,7 +1,7 @@
 {
   "watch": ["src/**/*.ts"],
-  "ignore": ["src/**/*.space.ts", "src/**/*.test.ts"],
-  "ext": "ts",
+  "ignore": ["src/**/*.space.ts", "src/**/*.test.ts", "node_modules"],
+  "ext": "ts,js,json",
   "exec": "ts-node ./src/swagger/swagger.ts",
   "verbose": true
 }
