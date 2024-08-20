@@ -1,6 +1,6 @@
 import swaggerAutogen from 'swagger-autogen';
 
-import { boldText } from '../utils/consoleColors.ts';
+import { boldText } from '../utils/consoleColors';
 
 const documentConfiguration = {
   info: {
@@ -31,6 +31,6 @@ export const routes = ['../app.ts'];
 swaggerAutogen({ openapi: '3.0.0' })(outputFile, routes, documentConfiguration)
   .then(async () => {
     // run server when swagger done with documention
-    return await import('../index.ts');
+    return await import('../index');
   })
   .catch((error) => console.log(boldText.RED, error));

@@ -5,6 +5,7 @@
   "author": "Abdullah Tanveer <abdullahtanveer56@outlook.com>",
   "license": "MIT",
   "scripts": {
+    "build": "yarn tsc",
     "dev": "nodemon --config nodemon.json",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
