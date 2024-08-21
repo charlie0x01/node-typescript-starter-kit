@@ -5,8 +5,9 @@ import consoleLogColors from '../utils/console-colors';
 const documentConfiguration = {
   info: {
     version: '1.0.0', // by default: '1.0.0'
-    title: 'NodeJS Typescript Starter Kit', // by default: 'REST API'
-    description: 'A Starter Kit for NodeJS REST APIs', // by default: ''
+    title: 'Node.js and TypeScript Backend Starter Kit', // by default: 'REST API'
+    description:
+      'Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provides a robust foundation for building scalable and maintainable backend applications using Node.js and TypeScript. Perfect for developers looking to kickstart new projects without the repetitive setup tasks.', // by default: ''
   },
   servers: [
     {
