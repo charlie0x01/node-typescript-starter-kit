@@ -1,6 +1,6 @@
 import swaggerAutogen from 'swagger-autogen';
 
-import { boldText } from '../utils/console-colors';
+import consoleLogColors from '../utils/console-colors';
 
 const documentConfiguration = {
   info: {
@@ -30,5 +30,5 @@ export const outputFile = './src/swagger/swagger-documentation.json';
 export const routes = ['./routes/index'];
 
 swaggerAutogen({ openapi: '3.0.0' })(outputFile, routes, documentConfiguration).catch((error) =>
-  console.log(boldText.RED, error)
+  console.log(consoleLogColors.boldText.RED, error)
 );

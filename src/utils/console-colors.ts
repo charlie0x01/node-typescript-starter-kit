@@ -1,4 +1,4 @@
-const normalText = {
+const reqguralText = {
   RED: '\x1b[31m%s\x1b[0m',
   GREEN: '\x1b[32m%s\x1b[0m',
 };
@@ -8,4 +8,9 @@ const boldText = {
   GREEN: '\x1b[1;32m%s\x1b[0m',
 };
 
-export { boldText, normalText };
+const consoleLogColors = {
+  reguralText: { ...reqguralText },
+  boldText: { ...boldText },
+};
+
+export default consoleLogColors;
