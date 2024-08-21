@@ -2,25 +2,30 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "NodeJS Typescript Boilerplate",
+    "title": "NodeJS Typescript Starter Kit",
     "description": "A Starter Kit for NodeJS REST APIs"
   },
   "servers": [
     {
-      "url": "http://localhost:8000",
+      "url": "http://localhost:8000/api/v1",
       "description": ""
     }
   ],
   "tags": [
     {
-      "name": "",
-      "description": ""
+      "name": "Welcome",
+      "description": "Default API Endpoints"
+    },
+    {
+      "name": "Test Error Handling",
+      "description": "Test Error Handling API Endpoints"
     }
   ],
   "paths": {
-    "/api/v1": {
+    "/default/welcome": {
       "get": {
-        "summary": "Welcome API Endpoint to start with",
+        "tags": ["Welcome"],
+        "summary": "Welcome API Endpoint to start",
         "description": "",
         "responses": {
           "200": {
@@ -67,8 +72,9 @@
         }
       }
     },
-    "/test-system-error": {
+    "/test/system-error": {
       "get": {
+        "tags": ["Test Error Handling"],
         "description": "",
         "responses": {
           "default": {
@@ -77,8 +83,9 @@
         }
       }
     },
-    "/test-programmer-error": {
+    "/test/programmer-error": {
       "get": {
+        "tags": ["Test Error Handling"],
         "description": "",
         "responses": {
           "default": {
@@ -87,8 +94,9 @@
         }
       }
     },
-    "/test-operational-error": {
+    "/test/operational-error": {
       "get": {
+        "tags": ["Test Error Handling"],
         "description": "",
         "responses": {
           "default": {
@@ -97,8 +105,9 @@
         }
       }
     },
-    "/test-unhandle-promise-error": {
+    "/test/unhandle-promise-error": {
       "get": {
+        "tags": ["Test Error Handling"],
         "description": "",
         "responses": {
           "default": {
