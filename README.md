@@ -14,13 +14,13 @@ This starter kit comes pre-configured with the following tools:
 - [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
 - [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/default/api-docs.
 - [x] **Jest with SuperTest**: Set up for API testing
+- [x] **Helmet**: Add Helmet middleware to set security headers to prevent request headers related security issues
 - [x] **Global Error Handling**
 - [x] **Cluster**: Setup to run multiple instances of Node.js that can distribute workloads among their application threads
 
 ## TODOs
 
 - [ ] Set up a logger for errors, warnings, info etc.
-- [ ] Set up helmet middleware to set secure headers
 - [ ] Set up body parser to limit the request body size
 - [ ] Do not return stack trace details to users instead return generic messages to user
 - [ ] Set up rete-limiting to fix the number of request a user can make, to prevent ddos attack
