@@ -1,4 +1,4 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Application, NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 
@@ -6,11 +6,14 @@ import helmet from 'helmet';
 import globalErrorHandler from './middleware/global-error-handler-middleware';
 // routes
 import v1Router from './routes';
+import CustomError from './utils/custom-error';
 
 const app: Application = express();
 
 // body parser
 app.use(express.json());
+//
+app.use(express.urlencoded({ extended: true }));
 // use cors
 app.use(cors());
 // add security headers
@@ -24,10 +27,9 @@ app.use(express.static(__dirname?.replace('src', '') + 'public'));
 app.use('/api/v1', v1Router);
 
 // path not found
-app.use((req: Request, res: Response) => {
-  res.status(404).json({
-    message: 'Resource not found',
-  });
+app.use((req: Request, res: Response, next: NextFunction) => {
+  const error = new CustomError('Resource not found', 404);
+  next(error);
 });
 
 // global error handler
