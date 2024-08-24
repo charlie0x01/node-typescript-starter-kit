@@ -1,23 +1,28 @@
-import { NextFunction, Request, Response, Router } from 'express';
+import express, { NextFunction, Request, Response, Router } from 'express';
 
 import CustomError from '../utils/custom-error';
 
-const testErrorRoutes = Router();
+const testErrorRoutes: Router = express.Router();
 
 // In your routes file
 testErrorRoutes.get('/system-error', (req: Request, res: Response, next: NextFunction) => {
   // #swagger.tags = ['Test Error Handling']
-  // Simulate a system error
-  process.nextTick(() => {
-    next(new Error('System Error Example'));
-  });
+  try {
+    throw new CustomError('System Error Example', 500);
+  } catch (error) {
+    next(error);
+  }
 });
 
 // In your routes file
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-testErrorRoutes.get('/programmer-error', (req: Request, res: Response) => {
+testErrorRoutes.get('/programmer-error', (req: Request, res: Response, next: NextFunction) => {
   // #swagger.tags = ['Test Error Handling']
-  throw new Error('Programmer Error Example'); // Uncaught exception
+  try {
+    throw new CustomError('Programmer Error Example', 500); // Uncaught exception
+  } catch (error) {
+    next(error);
+  }
 });
 
 // In your routes file
@@ -25,8 +30,8 @@ testErrorRoutes.get('/operational-error', (req: Request, res: Response, next: Ne
   // #swagger.tags = ['Test Error Handling']
   try {
     throw new CustomError('Operational Error Example', 400);
-  } catch (err) {
-    next(err);
+  } catch (error) {
+    next(error);
   }
 });
 
@@ -34,8 +39,8 @@ testErrorRoutes.get('/unhandle-promise-error', async (req: Request, res: Respons
   // #swagger.tags = ['Test Error Handling']
   try {
     await import('../utils/unhandled-promise-test');
-  } catch (err) {
-    next(err);
+  } catch (error) {
+    next(error);
   }
 });
 
