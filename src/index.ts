@@ -1,27 +1,34 @@
 import cluster from 'cluster';
 
-import app from './app';
 import consoleLogColors from './utils/console-colors';
 import env from './config/env';
+import app from './app';
 
 if (cluster.isPrimary) {
-  // TODO: style recommendation: set below statement background color green and foreground color black
-  // TODO: add teminal bell when server starts
-  console.log(`Primary Process Starting ${env.NUMBER_OF_WORKERS} Workers!`);
-
   // generate swagger documentation
   (async function () {
     await import('./swagger/swagger');
   })();
 
-  cluster.fork();
+  // TODO: style recommendation: set below statement background color green and foreground color black
+  // TODO: add teminal bell when server starts
+  console.log(`Primary Process Starting ${env.NUMBER_OF_WORKERS} Workers!`);
+  // eslint-disable-next-line prefer-const
+  let workers = [];
 
-  for (let worker = 1; worker < env.NUMBER_OF_WORKERS; worker++) cluster.fork();
+  for (let worker = 1; worker <= env.NUMBER_OF_WORKERS; worker++) workers.push(cluster.fork());
 
   // when a worker starts
   cluster.on('online', (workerInfo) =>
     console.log(consoleLogColors.reguralText.GREEN, ` Worker with Process ${workerInfo.process.pid} Started!`)
   );
+
+  // Collect metrics from workers
+  // cluster.on('message', (worker, message) => {
+  //   if (message.type === 'requestCount') {
+  //     process.stdout.write(`handled ${message.count} requests\r`);
+  //   }
+  // });
 
   // start a new worker whenever a worker dies of some error
   cluster.on('exit', (worker, code, signal) => {
@@ -30,7 +37,10 @@ if (cluster.isPrimary) {
     cluster.fork();
   });
 } else {
-  app.listen(env.APP_PORT, () => {
+  // create express app
+  const expressApp = app();
+  // start listening to requests
+  expressApp.listen(env.APP_PORT, () => {
     console.log(consoleLogColors.boldText.GREEN, `Server is up & running on http://localhost:${env.APP_PORT}`);
   });
 }
