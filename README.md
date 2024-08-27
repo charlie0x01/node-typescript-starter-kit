@@ -94,7 +94,7 @@ http://localhost:8000/api/v1/default/benchmark
 
 ## 📚 Documentation
 
-API documentation is available through Swagger UI. Access it by navigating to http:localhost:8000/api/v1/api-docs in your running application.
+API documentation is available through Swagger UI. Access it by navigating to `http:localhost:8000/api/v1/default/api-docs` in your running application.
 
 ## 🤝 Contributing
 
