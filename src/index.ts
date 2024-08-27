@@ -1,4 +1,3 @@
-import os from 'os';
 import cluster from 'cluster';
 
 import app from './app';
@@ -6,17 +5,18 @@ import consoleLogColors from './utils/console-colors';
 import env from './config/env';
 
 if (cluster.isPrimary) {
-  const numOfWorkers = os.cpus().length / 2;
   // TODO: style recommendation: set below statement background color green and foreground color black
   // TODO: add teminal bell when server starts
-  console.log(`Primary Process Starting ${numOfWorkers} Workers!`);
+  console.log(`Primary Process Starting ${env.NUMBER_OF_WORKERS} Workers!`);
 
   // generate swagger documentation
   (async function () {
     await import('./swagger/swagger');
   })();
 
-  for (let worker = 1; worker <= numOfWorkers; worker++) cluster.fork();
+  cluster.fork();
+
+  for (let worker = 1; worker < env.NUMBER_OF_WORKERS; worker++) cluster.fork();
 
   // when a worker starts
   cluster.on('online', (workerInfo) =>
