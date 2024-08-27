@@ -8,31 +8,33 @@ import globalErrorHandler from './middleware/global-error-handler-middleware';
 import v1Router from './routes';
 import CustomError from './utils/custom-error';
 
-const app: Application = express();
+export default (): Application => {
+  const app: Application = express();
 
-// body parser
-app.use(express.json());
-//
-app.use(express.urlencoded({ extended: true }));
-// use cors
-app.use(cors());
-// add security headers
-app.use(helmet());
-// disable fingerprinting
-app.disable('x-powered-by');
-// set public folder for static files
-app.use(express.static(__dirname?.replace('src', '') + 'public'));
+  // body parser
+  app.use(express.json());
+  //
+  app.use(express.urlencoded({ extended: true }));
+  // use cors
+  app.use(cors());
+  // add security headers
+  app.use(helmet());
+  // disable fingerprinting
+  app.disable('x-powered-by');
+  // set public folder for static files
+  app.use(express.static(__dirname?.replace('src', '') + 'public'));
 
-// v1 routes
-app.use('/api/v1', v1Router);
+  // v1 routes
+  app.use('/api/v1', v1Router);
 
-// path not found
-app.use((req: Request, res: Response, next: NextFunction) => {
-  const error = new CustomError('Resource not found', 404);
-  next(error);
-});
+  // path not found
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    const error = new CustomError('Resource not found', 404);
+    next(error);
+  });
 
-// global error handler
-app.use(globalErrorHandler);
+  // global error handler
+  app.use(globalErrorHandler);
 
-export default app;
+  return app;
+};
