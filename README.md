@@ -18,7 +18,7 @@ This starter kit comes pre-configured with the following tools:
 - [x] **Global Error Handling**
 - [x] **Cluster**: Setup to run multiple instances of Node.js that can distribute workloads among their application threads
 
-## TODOs
+## ✅ TODOs
 
 - [ ] Set up a logger for errors, warnings, info etc.
 - [ ] Set up body parser to limit the request body size
