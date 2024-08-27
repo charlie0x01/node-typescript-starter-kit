@@ -95,16 +95,17 @@ API documentation is available through Swagger UI. Access it by navigating to ht
 We welcome contributions to improve this starter kit. Please follow these steps:
 
 Fork the repository.
-Create a new branch (git checkout -b feature/your-feature|your-configuration).
-Commit your changes (git commit -am 'Add new feature'|'add new configuration').
-Push to the branch (git push origin feature/your-feature|your-configuration).
+Create a new branch (git checkout -b 'feature/your-feature'/'your-configuration').
+Commit your changes (git commit -am 'Add new feature'/'add new configuration').
+Push to the branch (git push origin 'feature/your-feature'/'your-configuration').
 Create a new Pull Request.
 
 ## 🚨 Issues and Support
 
 If you encounter any issues or have questions, please open an issue on the GitHub repository.
 
-📄 License
+## 📄 License
+
 This project is licensed under the MIT [License](./License). See the LICENSE file for details.
 
 ### 🔗 Links
