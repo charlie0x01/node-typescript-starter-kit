@@ -1,7 +1,7 @@
 import { Request, Response, Router } from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-import swaggerDocument from '../swagger/swagger-documentation.json';
+import swaggerDocument from '../swagger/documentation.swagger.json';
 
 let count = 0;
 const defaultRoutes = Router();

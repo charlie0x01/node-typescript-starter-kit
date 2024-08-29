@@ -1,7 +1,7 @@
 import cluster from 'cluster';
 
-import consoleLogColors from './utils/console-colors';
-import env from './config/env';
+import consoleLogColors from './utils/consoleColors.utils';
+import env from './config/app.config';
 import app from './app';
 
 if (cluster.isPrimary) {

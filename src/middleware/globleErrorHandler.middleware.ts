@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-import CustomError from '../utils/custom-error';
+import CustomError from '../utils/customError.utils';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const globalErrorHandler = (err: Error | CustomError, req: Request, res: Response, next: NextFunction) => {

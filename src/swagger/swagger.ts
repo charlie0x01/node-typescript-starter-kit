@@ -1,6 +1,6 @@
 import swaggerAutogen from 'swagger-autogen';
 
-import consoleLogColors from '../utils/console-colors';
+import consoleLogColors from '../utils/consoleColors.utils';
 
 const documentConfiguration = {
   info: {

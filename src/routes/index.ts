@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import defaultRoutes from './default-routes';
-import testErrorRoutes from './global-error-test-routes';
+import defaultRoutes from './default.routes';
+import testErrorRoutes from './errorTest.routes';
 
 const v1Router = Router();
 

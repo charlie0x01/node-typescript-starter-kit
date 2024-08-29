@@ -72,6 +72,25 @@
         }
       }
     },
+    "/default/benchmark": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "requests",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/test/system-error": {
       "get": {
         "tags": ["Test Error Handling"],

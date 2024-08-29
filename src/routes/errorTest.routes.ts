@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response, Router } from 'express';
 
-import CustomError from '../utils/custom-error';
+import CustomError from '../utils/customError.utils';
 
 const testErrorRoutes: Router = express.Router();
 
@@ -38,7 +38,7 @@ testErrorRoutes.get('/operational-error', (req: Request, res: Response, next: Ne
 testErrorRoutes.get('/unhandle-promise-error', async (req: Request, res: Response, next: NextFunction) => {
   // #swagger.tags = ['Test Error Handling']
   try {
-    await import('../utils/unhandled-promise-test');
+    await import('../utils/unhandledPromiseTest.utils');
   } catch (error) {
     next(error);
   }

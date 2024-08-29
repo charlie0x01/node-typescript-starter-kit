@@ -3,10 +3,10 @@ import cors from 'cors';
 import helmet from 'helmet';
 
 // middlewares
-import globalErrorHandler from './middleware/global-error-handler-middleware';
+import globalErrorHandler from './middleware/globleErrorHandler.middleware';
 // routes
 import v1Router from './routes';
-import CustomError from './utils/custom-error';
+import CustomError from './utils/customError.utils';
 
 export default (): Application => {
   const app: Application = express();
