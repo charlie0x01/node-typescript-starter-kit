@@ -8,19 +8,19 @@ Welcome to the Node.js and TypeScript Backend Starter Kit! This repository provi
 
 This starter kit comes pre-configured with the following tools:
 
-- [x] **ESLint**: Configured in .eslintrc.json to enforce coding standards.
-- [x] **Prettier**: Configured in .prettierrc for automatic formatting.
-- [x] **Husky**: Configured in package.json to run scripts and linting before commits.
-- [x] **Lint-Staged**: Configured in package.json to run linting on staged files.
-- [x] **Swagger**: Set up for API documentation and can be accessed via /api/v1/default/api-docs.
-- [x] **Jest with SuperTest**: Set up for API testing
-- [x] **Helmet**: Add Helmet middleware to set security headers to prevent request headers related security issues
-- [x] **Global Error Handling**
-- [x] **Cluster**: Setup to run multiple instances of Node.js that can distribute workloads among their application threads
+- [x] **ESLint**: Enforces consistent coding standards with rules configured in `.eslintrc.mjs`.
+- [x] **Prettier**: Automatically formats code according to rules specified in `.prettierrc`.
+- [x] **Husky**: Ensures code quality by running linting and scripts before commits.
+- [x] **Lint-Staged**: Runs linting checks only on staged files during the commit process.
+- [x] **Swagger**: Provides interactive API documentation accessible at `/api/v1/default/api-docs`.
+- [x] **Jest with SuperTest**: Facilitates comprehensive API testing with Jest and SuperTest integration.
+- [x] **Helmet**: Adds security headers to enhance protection against web vulnerabilities.
+- [x] **Global Error Handling**: Centralizes error management to handle exceptions consistently across the application.
+- [x] **Cluster**: Utilizes multiple Node.js instances to distribute workload and minimize downtime.
+- [x] **Winston**: Offers robust logging for errors, warnings, and informational messages across the application.
 
 ## ✅ TODOs
 
-- [ ] Set up a logger for errors, warnings, info etc.
 - [ ] Set up body parser to limit the request body size
 - [ ] Do not return stack trace details to users instead return generic messages to user
 - [ ] Set up rete-limiting to fix the number of request a user can make, to prevent ddos attack
