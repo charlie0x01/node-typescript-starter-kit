@@ -1,6 +1,6 @@
 import swaggerAutogen from 'swagger-autogen';
 
-import consoleLogColors from '../utils/consoleColors.utils';
+import logger from '../utils/logger.utils';
 
 const documentConfiguration = {
   info: {
@@ -27,9 +27,9 @@ const documentConfiguration = {
   ],
 };
 
-export const outputFile = './src/swagger/swagger-documentation.json';
+export const outputFile = './src/swagger/documentation.swagger.json';
 export const routes = ['./routes/index'];
 
-swaggerAutogen({ openapi: '3.0.0' })(outputFile, routes, documentConfiguration).catch((error) =>
-  console.log(consoleLogColors.boldText.RED, error)
-);
+swaggerAutogen({ openapi: '3.0.0' })(outputFile, routes, documentConfiguration)
+  .then(() => logger.info('Swagger Documentation Generated'))
+  .catch((error) => logger.info(error));

@@ -25,7 +25,8 @@
     "helmet": "^7.1.0",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "winston": "^3.14.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -34,6 +35,7 @@
     "@types/node": "^22.2.0",
     "@types/supertest": "^6.0.2",
     "@types/swagger-ui-express": "^4.1.6",
+    "@types/winston": "^2.4.4",
     "@typescript-eslint/parser": "^8.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
